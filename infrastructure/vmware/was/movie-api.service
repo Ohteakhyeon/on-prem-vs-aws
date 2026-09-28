@@ -1,0 +1,13 @@
+[Unit]
+Description=Movie Reservation API Server
+After=network.target
+
+[Service]
+User=was01
+WorkingDirectory=/home/was01/movie-project/was
+EnvironmentFile=/etc/movie-api/movie-api.env
+ExecStart=/usr/bin/npm start
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
